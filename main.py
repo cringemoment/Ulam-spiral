@@ -16,6 +16,7 @@ sr.hideturtle()
 sr.color("Yellow")
 sr.pensize(2)
 
+#checking if a number is prime in the most basic way possible
 def primecheck(number):
     if(number == 2):
         return True
@@ -28,24 +29,28 @@ def primecheck(number):
         i += 2
     return True
 
+#drawing the spiral
 def drawspiral():
-    step = 1
-    currentnum = 0
+    step = 1 #step is to know when to turn the turtle
+    currentnum = 0 #the individual dots
     sr.goto(0, 0)
+
+    #drawing until the turtle goes out of the screen
     while(sr.xcor() < 800 and sr.ycor() < 800 and sr.xcor() > -800 and sr.ycor() > -800):
+        #drawing the side of the spiral
         for _ in range(int(step)):
-            currentnum += 1
+            currentnum += 1 #updating the number
             if(primecheck(currentnum)):
-                sr.dot(6, "red")
-                sr.forward(5)
+                sr.dot(6, "red") #highlighting the prime numbers with red instead of yellow
+                sr.forward(5) #move that shit forwards
             else:
                 sr.dot(6)
-                sr.forward(5)
-            s.update()
+                sr.forward(5) #move that shit forwards
+            s.update() #you don't actually need this; getting rid of it would improve performance probably, but it would be boring
         sr.left(90)
-        step += 0.5
+        step += 0.5 #little trick to update it every 2; add 0.5 and round down
     print("Done")
 
 drawspiral()
 
-s.exitonclick()
+s.exitonclick() #when the program is done, just click anywhere to close it
