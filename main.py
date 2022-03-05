@@ -37,10 +37,10 @@ def drawspiral():
             currentnum += 1
             if(primecheck(currentnum)):
                 sr.dot(6, "red")
-                sr.forward(5)
+                sr.forward(50)
             else:
                 sr.dot(6)
-                sr.forward(5)
+                sr.forward(50)
             s.update()
         sr.left(90)
         step += 0.5
@@ -48,9 +48,4 @@ def drawspiral():
 
 drawspiral()
 
-screen = sr.getscreen()
-screen.getcanvas().postscript(file = "spiral.eps")
-
-#main loop
-while True:
-    s.update()
+s.exitonclick()
