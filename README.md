@@ -1,2 +1,5 @@
-# Ulam-spiral
-ehrm, achxually, it doesnt matter if the number is prime or not, because of imaginary numbers
+# The Ulam spiral!
+## https://en.wikipedia.org/wiki/Ulam_spiral
+I have no idea how it happens. Read the wikipedia article yourself.
+No required modules this time.
+Check spiral.png for finished product.
