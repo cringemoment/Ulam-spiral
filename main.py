@@ -37,10 +37,10 @@ def drawspiral():
             currentnum += 1
             if(primecheck(currentnum)):
                 sr.dot(6, "red")
-                sr.forward(50)
+                sr.forward(5)
             else:
                 sr.dot(6)
-                sr.forward(50)
+                sr.forward(5)
             s.update()
         sr.left(90)
         step += 0.5
